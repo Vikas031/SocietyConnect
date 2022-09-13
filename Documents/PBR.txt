@@ -1,0 +1,36 @@
+Home 
+
+Members-
+1.Member list -> Details 
+2. Search members(Additional) 3. Add Members
+
+
+Ledgers - > 1.Member list -> Member Ledger 2. Search members(Additional)
+
+Loans - >1. Search Members
+2. Members list -> 1. History 2.Provide Loan
+
+
+FD - >1. Search Members
+2. Members list -> 1. History 2.Provide FD
+
+
+Demand - > Monthly wise demand
+
+
+Users : name , password (security)
+
+member : 
+	key :membership number, name , image , father/husband name , age , nationality , dob , address , phone number ,
+	 occupation , occupation address, bank account number , bank name , pan card , income tax payee (bool),
+	income , nominee name , nominee father's name ,nominee's address , nominee's age , name of introducer,
+	intorducer occuoation , introducer's address ,([loan_id ])
+_
+loan :  map loan(membership id)
+fd -> key -> map fd (similar)
+
+demand -> monthy
+
+Tech Stack : DB mongodb 
+	     frontend : React
+	     Backend : Node js 
