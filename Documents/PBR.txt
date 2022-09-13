@@ -7,7 +7,8 @@ Members-
 
 Ledgers - > 1.Member list -> Member Ledger 2. Search members(Additional)
 
-Loans - >1. Search Members
+Loans - >It will have two sections (Active & Completed)
+1. Search Members
 2. Members list -> 1. History 2.Provide Loan
 
 
