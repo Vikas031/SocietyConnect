@@ -1,5 +1,6 @@
 import './App.css';
 import {BrowserRouter ,Routes,Route,Navigate} from 'react-router-dom';
+import { useSelector} from 'react-redux'
 import Login from './Login/Login';
 import Home from './Admin/Home/Home';
 import Header from './Components/Header/Header';
@@ -10,19 +11,15 @@ import Loan from './Admin/Loan/Loan';
 import FixedDeposit from './Admin/FixedDeposit/FixedDeposit';
 import Demand from './Admin/Demand/Demand';
 
-const isAuth=false;
 
 function App() {
+   const isAuth=useSelector((state)=>state.auth.isAuth);
   return (
     <>
     <BrowserRouter>
     <Header />
-    {false&&<Navigation/>}
+    {isAuth&&<Navigation/>}
     <Routes>
-    
-    {/* <Route exact path='/' element={<GuestRoute>
-       <Home/>
-    </GuestRoute>} /> */}
    
     <Route exact path='/' element={<Login/>} /> 
 
@@ -54,9 +51,9 @@ function App() {
 
 
 const ProtectedRoute=(Props)=>{
- 
+   const {isAuth}=useSelector((state)=>state.auth)
   return (
-    false?<Navigate to="/"/>:Props.children
+    !isAuth?<Navigate to="/"/>:Props.children
   )
 }
 

@@ -1,10 +1,13 @@
 import React from 'react';
 import styles from './Login.module.css';
 import { useNavigate } from 'react-router';
+import { useDispatch } from 'react-redux';
+import { setAuth } from '../store/authSlice';
 const Login = () => {
   const navigate=useNavigate();
-
+  const dispatch=useDispatch();
   function submit(){
+    dispatch(setAuth(true));
     navigate('/home');
   }
 
