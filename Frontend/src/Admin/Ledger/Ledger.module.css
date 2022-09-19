@@ -1,0 +1,58 @@
+.memberstable{
+    border: 1px solid black;
+    height: 100vh;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+}
+h2 small {
+    font-size: 0.5em;
+}
+
+th{
+    border: 1px solid black !important;
+}
+
+
+
+.memberbtn{
+    width: 100px;
+}
+
+@media only screen and (max-width: 700px){
+    .memberstable{
+        width: 100vw !important;
+    }
+    thead{
+        font-size: 0.4rem;
+        
+    }
+    th{
+        padding: 2px !important;
+    }
+
+    tbody{
+        font-size: 0.4rem;
+    }
+
+    .memberbtn{
+        width: 40px;
+        font-size: 0.4rem !important;
+        padding: 0 !important;
+    }
+    
+    td{
+        padding: 3px !important;
+    }
+}

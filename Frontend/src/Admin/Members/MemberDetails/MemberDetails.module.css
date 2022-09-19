@@ -1,20 +1,99 @@
-.toggle_detail{
-    border: 1px solid red;
-    height: 300px;
+@media (min-width: 700px){
+    .toggle_detail{
+        border: 1px solid red;
+        height: 300px;
+    }
+    
+    .details{
+        height: 500px;
+        border: 1px solid green;
+    }
+    
+    .detail_header{
+        margin: 5px;
+        border: 1px solid black;
+        cursor: pointer;
+        background-color: green;
+    }
+    
+    .detail_header:hover{
+        background-color:cadetblue;
+    }
+
+    .member_details{
+        border:1px solid black ;
+        height:100vh ;
+        margin-top: 10px;
+    }
+    
+}
+.avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.details{
-    height: 500px;
-    border: 1px solid green;
+.avatarWrapper {
+    width: 110px;
+    height: 110px;
+    border: 6px solid #0077ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.detail_header{
-    margin: 2px;
-    border: 1px solid black;
-    cursor: pointer;
-    background-color: green;
+.avatarImage {
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
 }
 
-.detail_header:hover{
-    background-color:cadetblue;
+.avatarInput {
+    display: none;
+}
+
+.avatarLabel {
+    color: #0077ff;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.details_division > div{
+    margin: 10px 0px;
+
+}
+
+.details_heading{
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.details_subhead{
+
+}
+
+@media (max-width: 700px){
+   
+    .member_details{
+        border:1px solid black ;
+        height:100vh ;
+        margin-top: 4px !important;
+        background-color: aqua;
+    }
+
+    .detail_header{
+        font-size: 0.45rem;
+        text-align: center;
+        margin-top: 4px !important;
+
+    }
+
+    .toggle_detail{
+        background-color: green;
+        height: 20px !important;
+        border: 1px solid red;
+    }
 }

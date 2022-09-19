@@ -1,0 +1,29 @@
+.demand_container{
+    margin-top: 10px;
+    height:100vh;
+    margin-bottom: 10px;
+}
+
+.division_head{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: bold;
+    color: brown;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.toggle_btn{
+    text-align: center;
+    width: 200px;
+    border: 1px solid black;
+    background-color: green;
+}
+
+.top_section{
+    border: 1px solid black;
+}
+
+.toggle_section{
+    border: 1px solid red;
+    height: 50px;
+}

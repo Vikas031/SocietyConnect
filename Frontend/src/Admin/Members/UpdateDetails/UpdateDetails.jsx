@@ -55,7 +55,7 @@ const UpdateDetails = () => {
         <div className={styles.avatarWrapper}>
                       <img
                           className={styles.avatarImage}
-                          src= {formData.profile_pic || "./images/default_profile_pic.png"}
+                          src= {formData.profile_pic || `/images/default_profile_pic.png`}
                           alt="avatar"
                       />
                   </div>
@@ -68,7 +68,7 @@ const UpdateDetails = () => {
                           className={styles.avatarInput}
                       />
                       <label className={styles.avatarLabel} htmlFor="avatarInput">
-                          Upload a Profile picture
+                          Upload a new Profile picture
                       </label>
                   </div>
                   </div>
