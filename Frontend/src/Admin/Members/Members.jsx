@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
+import { useNavigate } from 'react-router';
 
 const arr=[
   {
@@ -31,6 +32,7 @@ const arr=[
 
 
 const Members = () => {
+  const navigate=useNavigate();
  return (
     <div>
     <Container className={styles.boxcontainer}>
@@ -67,9 +69,13 @@ const Members = () => {
           <td>{item.membership_no}</td>
           <td>{item.mobile}</td>
           <td style={{display:'flex',justifyContent:'center'}}>
-            <Button className={styles.memberbtn} variant="success" size="sm">Edit</Button> 
+            <Button className={styles.memberbtn} variant="success" size="sm" onClick={()=>{
+              navigate(`/edit/${item.membership_no}`)
+            }}>Edit</Button> 
             <div>||</div>
-            <Button className={styles.memberbtn} variant="info" size="sm">Details</Button></td>
+            <Button className={styles.memberbtn} variant="info" size="sm" onClick={()=>{
+              navigate(`/member-details/${item.membership_no}`)
+            }}>Details</Button></td>
         </tr>)
         })
         }

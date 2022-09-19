@@ -11,7 +11,8 @@ import Loan from './Admin/Loan/Loan';
 import FixedDeposit from './Admin/FixedDeposit/FixedDeposit';
 import Demand from './Admin/Demand/Demand';
 import MemberForm from './Admin/Members/MemberForm/MemberForm'
-
+import UpdateDetails from './Admin/Members/UpdateDetails/UpdateDetails';
+import MemberDetails from './Admin/Members/MemberDetails/MemberDetails';
 
 function App() {
    const isAuth=useSelector((state)=>state.auth.isAuth);
@@ -45,6 +46,14 @@ function App() {
     
     <Route exact path='/add-member' element={<ProtectedRoute>
        <MemberForm></MemberForm>
+    </ProtectedRoute>} />
+
+    <Route  path='/edit/:membership_no' element={<ProtectedRoute>
+       <UpdateDetails />
+    </ProtectedRoute>} />
+
+    <Route  path='/member-details/:membership_no' element={<ProtectedRoute>
+        <MemberDetails></MemberDetails>
     </ProtectedRoute>} />
 
 

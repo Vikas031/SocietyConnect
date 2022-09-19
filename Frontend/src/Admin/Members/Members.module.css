@@ -36,6 +36,10 @@ th{
     }
     thead{
         font-size: 0.4rem;
+        
+    }
+    th{
+        padding: 2px !important;
     }
 
     tbody{
@@ -47,7 +51,7 @@ th{
         font-size: 0.4rem !important;
         padding: 0 !important;
     }
-
+    
     td{
         padding: 3px !important;
     }

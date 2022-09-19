@@ -1,0 +1,20 @@
+.toggle_detail{
+    border: 1px solid red;
+    height: 300px;
+}
+
+.details{
+    height: 500px;
+    border: 1px solid green;
+}
+
+.detail_header{
+    margin: 2px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: green;
+}
+
+.detail_header:hover{
+    background-color:cadetblue;
+}
