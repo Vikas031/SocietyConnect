@@ -3,13 +3,14 @@ import {BrowserRouter ,Routes,Route,Navigate} from 'react-router-dom';
 import { useSelector} from 'react-redux'
 import Login from './Login/Login';
 import Home from './Admin/Home/Home';
-import Header from './Components/Header/Header';
-import Navigation from './Components/Navigation/Navigation';
+import Header from './Components/Shared/Header/Header';
+import Navigation from './Components/Shared/Navigation/Navigation';
 import Members from './Admin/Members/Members';
 import Ledger from './Admin/Ledger/Ledger';
 import Loan from './Admin/Loan/Loan';
 import FixedDeposit from './Admin/FixedDeposit/FixedDeposit';
 import Demand from './Admin/Demand/Demand';
+import MemberForm from './Admin/Members/MemberForm/MemberForm'
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
     <>
     <BrowserRouter>
     <Header />
-    {isAuth&&<Navigation/>}
+    {isAuth.payload&&<Navigation/>}
     <Routes>
    
     <Route exact path='/' element={<Login/>} /> 
@@ -41,6 +42,11 @@ function App() {
     <Route exact path='/demand' element={<ProtectedRoute>
        <Demand/>
     </ProtectedRoute>} />
+    
+    <Route exact path='/add-member' element={<ProtectedRoute>
+       <MemberForm></MemberForm>
+    </ProtectedRoute>} />
+
 
     </Routes>
     </BrowserRouter>

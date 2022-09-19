@@ -12,7 +12,7 @@ const Login = () => {
   }
 
   return (
-    <div>
+    <div style={{border:'1px solid black',width:'100%'}}>
     <div className={styles.main}>
     
     <p className={styles.sign} >Sign in</p>

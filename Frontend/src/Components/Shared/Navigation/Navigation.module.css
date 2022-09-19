@@ -1,0 +1,28 @@
+.navcontainer{
+    border: 1px solid green;
+    background-color: aquamarine;
+    
+}
+
+.navcontainer >div{
+   border: 1px solid rgb(35, 145, 248);
+   text-align: center;
+   
+}
+
+
+.navcontainer >div:hover{
+    cursor: pointer;
+    background-color:green;
+}
+
+@media (max-width: 700px) {
+    .navcontainer >div {
+        padding: 3% 0;
+        height: 50px;
+        border: 1px solid blue;
+    }
+    .navigation{
+        margin-bottom: 10%;
+    }
+}

@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:xx-large;
+    
+}
+
+.container >div{
+    color: rgb(27, 87, 37);
+    margin: 1%;
+    font-weight: bolder;
+}
+
+.header{
+    border: 1px solid black;
+    justify-content: center;
+    display: flex;
+}
+
+
+.logoutbtn{
+    border: none;
+    background: red;
+    width: 2rem;
+    border-radius: 50%;
+    padding: 3px;
+}

@@ -1,0 +1,165 @@
+import React,{useState} from 'react';
+import { useReducer } from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import styles from './MemberForm.module.css'
+
+const formReducer = (state, event) => {
+    if(event.reset) {
+        return {}
+      }
+    return {
+      ...state,
+      [event.name]: event.value
+    }
+   }
+   
+
+const MemberForm = () => {
+    const [formData, setFormData] = useReducer(formReducer, {});
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    setSubmitting(true);
+
+    setTimeout(() => {
+      setSubmitting(false);
+    }, 3000)
+  }
+
+  const handleChange = event => {
+    setFormData({
+      name: event.target.name,
+      value: event.target.value,
+    });
+  }
+  console.log(formData);
+  return (
+      <>
+      
+      <h3 style={{textAlign:'center',margin:'10px auto'}}>MemberForm</h3>
+
+      <div className={styles.testbox}>
+      <form  className={styles.memberform} action="/">
+      <h3>Bank Details</h3>
+        <div className={styles.item}>
+          <p>Name : &nbsp; <select id="cars" name="Salutation" onChange={handleChange}>
+          <option value="Sh.">Sh.</option>
+          <option value="Smt.">Smt.</option>
+          <option value="Miss">Miss</option>
+        </select></p>
+          <div>
+       <input name="name" onChange={handleChange} value={formData.name || ''}  required/>
+          </div>
+        </div>
+
+        <div className={styles.item}>
+          <p>Father's Name :</p>
+          <div>
+       <input name="father_name" onChange={handleChange} value={formData.father_name || ''}  required/>
+          </div>
+        </div>
+
+        <div className={styles.item}>
+          <p>Age :</p>
+          <div>
+       <input name="age" onChange={handleChange} value={formData.age || ''}  required/>
+          </div>
+        </div>
+        
+        <div className={styles.item}>
+          <p>Nationality :</p>
+          <div>
+       <input name="nationality" onChange={handleChange} value={formData.nationality || ''}  required/>
+          </div>
+        </div>
+
+        <div className={styles.item}>
+          <p>Date Of Birth :</p>
+          <div>
+       <input name="dob" type="date" onChange={handleChange} value={formData.dob || ''}  required/>
+          </div>
+        </div>
+        
+        <div className={styles.item}>
+          <p>Home Address :</p>
+          <textarea rows="3" name="home_address" onChange={handleChange} value={formData.home_address || ''}  required></textarea>
+        </div>
+
+        <div className={styles.item}>
+          <p>Residence Phone Number :</p>
+          <div>
+       <input name="phone_no" onChange={handleChange} value={formData.phone_no || ''}  required/>
+          </div>
+        </div>
+
+        <div className={styles.item}>
+          <p>Occupation : <select  name="occupation_type" onChange={handleChange}>
+          <option value="Govt. Servant">Govt. Servant</option>
+          <option value="Non Govt. Servant">Non Govt. Servant</option>
+        </select></p>
+          <div>
+       <input name="occupation" onChange={handleChange} value={formData.occupation || ''}  required/>
+          </div>
+        </div>
+
+        <div className={styles.item}>
+          <p>Occupation Address &amp; Phone No. :</p>
+          <div>
+          <textarea rows="3" name="occupation_address" onChange={handleChange} value={formData.occupation_address || ''}  required></textarea>
+          </div>
+        </div>
+
+        <h3>Bank Details</h3>
+
+        <div className={styles.item}>
+          <p>Name of the Bank :</p>
+          <div>
+       <input name="bank_name" onChange={handleChange} value={formData.bank_name || ''}  required/>
+          </div>
+        </div>
+
+        <div className={styles.item}>
+          <p>Branch :</p>
+          <div>
+       <input name="bank_branch" onChange={handleChange} value={formData.bank_branch || ''}  required/>
+          </div>
+        </div>
+
+        <div className={styles.item}>
+          <p>Bank Acc. Number :</p>
+          <div>
+       <input name="bank_acc_no" onChange={handleChange} value={formData.bank_acc_no || ''}  required/>
+          </div>
+        </div>
+
+        <div className={styles.item}>
+          <p>Pan A/c No. (if any) :</p>
+          <div>
+       <input name="pan_no" onChange={handleChange} value={formData.pan_no || ''} />
+          </div>
+        </div>
+
+        <div className={styles.item}>
+          <p>Income_tax_payee :  &nbsp; <select  name="income_tax_payee" onChange={handleChange}>
+          <option value="YES">YES</option>
+          <option value="NO">NOt</option>
+        </select></p>
+        </div>
+
+        <div className={styles.item}>
+          <p>Income :</p>
+          <div>
+       <input name="income" onChange={handleChange} value={formData.income || ''} />
+          </div>
+        </div>
+        
+      </form>
+    </div>
+    </>
+  )
+}
+
+export default MemberForm
