@@ -6,13 +6,15 @@ Members-
 
 Ledgers - > 1.Member list -> Member Ledger 2. Search members(Additional)
 
-Loans - >It will have two sections (Active & Completed)
-1. Search Members
-2. Members list -> 1. History 2.Provide Loan
+individual member -> Loan, FD
+
+# Loans - >It will have two sections (Active & Completed)
+# 1. Search Members
+# 2. Members list -> 1. History 2.Provide Loan
 
 
-FD - >1. Search Members
-2. Members list -> 1. History 2.Provide FD
+# FD - >1. Search Members
+# 2. Members list -> 1. History 2.Provide FD
 
 
 Demand - > Monthly wise demand

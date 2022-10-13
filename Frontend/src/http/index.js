@@ -5,10 +5,14 @@ const api=axios.create({
     withCredentials:true,
     headers:{
         'Content-type':'application/json',
-        Accept:'application/json'
+        'Accept':'application/json'
     }
 })
 
+export const add_new_member=(data)=> {
+    console.log(data);
+    api.post('/add-member',data);
+}
 
 
 export default api;

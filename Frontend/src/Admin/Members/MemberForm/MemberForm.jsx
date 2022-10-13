@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { useReducer } from 'react';
 import styles from './MemberForm.module.css'
-
+import { add_new_member } from '../../../http';
 
 
 const formReducer = (state, event) => {
@@ -189,6 +189,7 @@ const MemberForm = () => {
           </div>
         </div>
         
+        <button  onClick={()=>  add_new_member(formData)}>Submit</button>
       </form>
     </div>
 
